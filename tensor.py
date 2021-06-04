@@ -23,3 +23,8 @@ print(rand_tensor.shape)
 print(rand_tensor.size)
 print(rand_tensor.dtype)
 print(rand_tensor.device)
+
+if torch.cuda.is_available():
+    rand_tensor = rand_tensor.to('cuda')
+
+print(rand_tensor.device)
